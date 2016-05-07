@@ -45,7 +45,7 @@ dependencies {
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     //providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
-  
+  	compile 'javax.mail:javax.mail-api:1.5.3'
 }
 
 task wrapper(type: Wrapper) {
