@@ -1,0 +1,21 @@
+package com.phobes.cloudDisk;
+import java.io.File;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class Application {
+
+	public static String ROOT = "upload-dir";
+
+	public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
+	@Bean
+    CommandLineRunner init() {
+        return (String[] args) -> {
+            new File(ROOT).mkdir();
+        };
+    }
+}
